@@ -43,7 +43,7 @@ npm run dev
 - prettier,
 - @emotion/react
 
-rquitetura de pastas e arquivos
+Arquitetura de pastas e arquivos
 ===================================
 
     .
