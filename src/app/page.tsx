@@ -1,95 +1,153 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
+
+import { Card } from '@/components/Card';
+import { CustomSkeleton } from '@/components/CustomSkeleton';
+import { Stack } from '@/components/Stack';
+import { Typography } from '@/components/Typography';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<main>
+			<Stack
+				style={{
+					padding: '128px 96px 0',
+					flexDirection: 'column'
+				}}
+			>
+				<Typography
+					variant="txtHeading"
+					color="#1d1c1c"
+					style={{
+						fontWeight: 'bold'
+					}}
+				>
+					Painel
+				</Typography>
+				<Typography
+					variant="txtSubtitle"
+					color="#1d1c1c"
+					style={{
+						paddingBottom: '32px'
+					}}
+				>
+					As útimas atualizações de hoje
+				</Typography>
+				<Stack
+					style={{
+						gap: 16
+					}}
+				>
+					<Card height={300} width={500}>
+						<CustomSkeleton
+							skeleton={{
+								count: 1,
+								borderRadius: 8
+							}}
+							themeSkeleton={{
+								height: 20,
+								width: 200,
+								baseColor: '#fff'
+							}}
+						/>
+						<CustomSkeleton
+							skeleton={{
+								count: 2,
+								borderRadius: 8,
+								style: {
+									marginBottom: '16px'
+								}
+							}}
+							themeSkeleton={{
+								height: 20,
+								width: 300,
+								baseColor: '#fff'
+							}}
+						/>
+					</Card>
+					<Card height={300} width={500}>
+						<CustomSkeleton
+							skeleton={{
+								count: 1,
+								borderRadius: 8
+							}}
+							themeSkeleton={{
+								height: 20,
+								width: 200,
+								baseColor: '#fff'
+							}}
+						/>
+						<CustomSkeleton
+							skeleton={{
+								count: 2,
+								borderRadius: 8,
+								style: {
+									marginBottom: '16px'
+								}
+							}}
+							themeSkeleton={{
+								height: 20,
+								width: 300,
+								baseColor: '#fff'
+							}}
+						/>
+					</Card>
+				</Stack>
+				<Card
+					// width={500}
+					style={{
+						flexDirection: 'row',
+						marginTop: 16
+					}}
+				>
+					<CustomSkeleton
+						skeleton={{
+							count: 5,
+							borderRadius: 8,
+							style: {
+								marginRight: '16px'
+							}
+						}}
+						themeSkeleton={{
+							height: 20,
+							width: 150,
+							baseColor: '#fff',
+							inline: true
+						}}
+					/>
+				</Card>
+				<Card
+					height={300}
+					style={{
+						marginTop: 16
+					}}
+				>
+					<CustomSkeleton
+						skeleton={{
+							count: 1,
+							borderRadius: 8
+						}}
+						themeSkeleton={{
+							height: 20,
+							width: 200,
+							baseColor: '#fff'
+						}}
+					/>
+					<CustomSkeleton
+						skeleton={{
+							count: 2,
+							borderRadius: 8,
+							style: {
+								marginBottom: '16px'
+							}
+						}}
+						themeSkeleton={{
+							height: 20,
+							width: 300,
+							baseColor: '#fff'
+						}}
+					/>
+				</Card>
+			</Stack>
+		</main>
+	);
 }

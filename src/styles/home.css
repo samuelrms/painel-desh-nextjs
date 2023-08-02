@@ -1,0 +1,17 @@
+.drawer-desk{
+  gap: 30px;
+  flex-direction: column;
+  padding: 24px 48px;
+  width: 300px;
+  align-items: center;
+
+  button{
+    text-align: left;
+  }
+}
+
+.container-box{
+  height: 100vh;
+  flex-direction: row;
+  display: flex;
+}
