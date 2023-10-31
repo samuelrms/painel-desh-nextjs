@@ -43,6 +43,9 @@ npm run dev
 - prettier,
 - @emotion/react
 
+  ![image](https://github.com/samuelrms/painel-desh-nextjs/assets/92615688/e1f43050-1812-49cc-a666-70e37762559f)
+
+
 Arquitetura de pastas e arquivos
 ===================================
 
